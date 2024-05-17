@@ -7,7 +7,7 @@ This is a test of componentizing Rust, JS and Python code to WASM component.
 Clone the repository and cd into it.
 
 ```bash
-git clone https://github.com/wst24365888/componentize-test
+git clone https://github.com/wst24365888/componentize-test.git
 cd componentize-test
 ```
 
