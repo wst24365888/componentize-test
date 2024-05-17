@@ -1,0 +1,5 @@
+package wasi:foo@0.1.0;
+
+world imports {
+    import bar;
+}

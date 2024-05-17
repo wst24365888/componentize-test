@@ -1,0 +1,28 @@
+[package]
+name = "componentize-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+wit-bindgen-rt = { version = "0.24.0", features = ["bitflags"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "local:hello"
+
+[package.metadata.component.target.dependencies]
+"wasi:foo" = { path = "wit/foo" }
+"wasi:http" = { path = "wit/http" }
+"wasi:clocks" = { path = "wit/clocks" }
+"wasi:io" = { path = "wit/io" }
+"wasi:random" = { path = "wit/random" }
+"wasi:cli" = { path = "wit/cli" }
+"wasi:filesystem" = { path = "wit/filesystem" }
+"wasi:sockets" = { path = "wit/sockets" }
+# "local:hello" = { path = "wit" }
+
+[workspace]
+exclude = [ "wit" ]

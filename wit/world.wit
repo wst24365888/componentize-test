@@ -1,0 +1,11 @@
+package local:hello;
+
+interface greeting {
+  say-hello: func(name: string) -> string;
+}
+
+world hello {
+  import wasi:foo/bar@0.1.0;
+  
+  export greeting;
+}
